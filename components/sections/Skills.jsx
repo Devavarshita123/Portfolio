@@ -1,51 +1,36 @@
 import SectionTitle from "../ui/SectionTitle";
 import SkillCard from "../ui/SkillCard";
-
 import { skills } from "../../data/skills";
+import FadeIn from "../animations/FadeIn";
 
 export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 bg-white"
+      className="py-24 bg-white dark:bg-slate-900"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <FadeIn>
+        <div className="max-w-7xl mx-auto px-6">
 
-        <SectionTitle
-          title="Skills & Technologies"
-          subtitle="Technologies and tools I use to design, develop, and deploy software solutions."
-        />
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          <SkillCard
-            title="Programming Languages"
-            skills={skills.languages}
+          <SectionTitle
+            title="Skills & Technologies"
+            subtitle="Technologies and tools I use to design, develop, and deploy software solutions."
           />
 
-          <SkillCard
-            title="Frontend"
-            skills={skills.frontend}
-          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
 
-          <SkillCard
-            title="Backend"
-            skills={skills.backend}
-          />
+            {skills.map((category) => (
+              <SkillCard
+                key={category.title}
+                title={category.title}
+                skills={category.skills}
+              />
+            ))}
 
-          <SkillCard
-            title="Databases"
-            skills={skills.databases}
-          />
-
-          <SkillCard
-            title="Tools"
-            skills={skills.tools}
-          />
+          </div>
 
         </div>
-
-      </div>
+      </FadeIn>
     </section>
   );
 }

@@ -1,14 +1,15 @@
 import SectionTitle from "../ui/SectionTitle";
 import StatCard from "../ui/StatCard";
 import { profile } from "../../data/profile";
-
+import FadeIn from "../animations/FadeIn";
 export default function About() {
   return (
     <section
       id="about"
-      className="py-24 bg-slate-50"
+      className="py-24 bg-slate-50 
+dark:bg-slate-900"
     >
-
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6">
 
         <SectionTitle
@@ -63,29 +64,29 @@ export default function About() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
 
           <StatCard
-            value="5+"
+            value="2"
             label="Projects"
           />
 
           <StatCard
-            value="10+"
+            value="2"
             label="Certifications"
           />
 
           <StatCard
-            value="15+"
+            value="2"
             label="Technologies"
           />
 
           <StatCard
-            value="4+"
-            label="Leadership Roles"
+            value="1"
+            label="Publications"
           />
 
         </div>
 
       </div>
-
+    </FadeIn>
     </section>
   );
 }

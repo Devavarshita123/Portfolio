@@ -19,7 +19,7 @@ export const profile = {
   graduationYear: "2027",
 
   tagline:
-    "Building impactful software solutions through full-stack development, problem solving, and continuous learning.",
+    "AWS Certified Solutions Architect Associate and ServiceNow Certified Application Developer passionate about building scalable cloud and software solutions.",
 
   location:
     "Vijayawada, Andhra Pradesh, India",

@@ -1,122 +1,25 @@
 export const projects = [
   {
-    id: 1,
-
-    title: "Blockchain Medicine Supply Chain Tracking",
-
-    category: "Blockchain",
+    title: "Liver Disease Detection",
 
     description:
-      "Secure pharmaceutical supply chain system using blockchain, RFID, and QR verification.",
+      "Developed an AI-powered liver disease prediction system using the TabNet model. The application analyzes patient health data and predicts the likelihood of liver disease, helping support early diagnosis and treatment decisions.",
 
-    impact:
-      "Improves medicine traceability and helps combat counterfeit drugs.",
-
-    technologies: [
-      "Blockchain",
-      "Java",
-      "MySQL",
-      "RFID"
-    ],
-
-    github: "#",
-
-    demo: "#",
-  },
-
-  {
-    id: 2,
-
-    title: "Chronic Liver Disease Detection",
-
-    category: "AI/ML",
-
-    description:
-      "Machine learning-based system for chronic liver disease prediction and staging.",
-
-    impact:
-      "Supports early disease detection using clinical and demographic data.",
-
-    technologies: [
+    tech: [
       "Python",
+      "TensorFlow",
+      "TabNet",
+      "NumPy",
       "Machine Learning",
-      "Pandas",
-      "Scikit-Learn"
     ],
 
-    github: "#",
+    image: "/projects/liverImage.png",
 
-    demo: "#",
+    github: "https://github.com/Devavarshita123/CLD-Backend",
+
+    demo: "https://cld-frontend.vercel.app/login",
   },
 
-  {
-    id: 3,
-
-    title: "College Recruitment Application",
-
-    category: "Full Stack",
-
-    description:
-      "Placement and recruitment management system for students and recruiters.",
-
-    impact:
-      "Simplifies recruitment workflows and placement tracking.",
-
-    technologies: [
-      "Java",
-      "MySQL",
-      "Spring Boot"
-    ],
-
-    github: "#",
-
-    demo: "#",
-  },
-
-  {
-    id: 4,
-
-    title: "Women's Health Monitoring Platform",
-
-    category: "Healthcare",
-
-    description:
-      "Health tracking platform with cycle monitoring and personalized insights.",
-
-    impact:
-      "Encourages proactive health management and awareness.",
-
-    technologies: [
-      "React",
-      "Node.js",
-      "MongoDB"
-    ],
-
-    github: "#",
-
-    demo: "#",
-  },
-
-  {
-    id: 5,
-
-    title: "DiagnoTracker",
-
-    category: "Upcoming",
-
-    description:
-      "AI-powered healthcare monitoring platform with intelligent recommendations.",
-
-    impact:
-      "Designed to provide continuous healthcare monitoring and insights.",
-
-    technologies: [
-      "AI",
-      "Mobile Development"
-    ],
-
-    github: "#",
-
-    demo: "#",
-  }
+  
+  
 ];

@@ -5,18 +5,32 @@ export default function SkillCard({
   return (
     <div
       className="
-      rounded-2xl
-      border
       p-6
-      hover:shadow-lg
-      transition
-    "
+rounded-3xl
+border
+border-white/10
+backdrop-blur-lg
+bg-white/60
+dark:bg-slate-800/60
+shadow-lg
+hover:shadow-2xl
+hover:-translate-y-2
+transition-all
+duration-300
+      "
     >
-      <h3 className="text-xl font-semibold mb-4">
+      <h3
+        className="
+        text-xl
+        font-semibold
+        mb-4
+        "
+      >
         {title}
       </h3>
 
       <div className="flex flex-wrap gap-2">
+
         {skills.map((skill) => (
           <span
             key={skill}
@@ -25,13 +39,14 @@ export default function SkillCard({
             py-1
             rounded-full
             bg-blue-100
-            text-blue-700
+            dark:bg-blue-900
             text-sm
-          "
+            "
           >
             {skill}
           </span>
         ))}
+
       </div>
     </div>
   );

@@ -1,34 +1,48 @@
-export const skills = {
-  languages: [
-    "Java",
-    "Python",
-    "C"
-  ],
+export const skills = [
+  {
+    title: "Programming Languages",
 
-  frontend: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS"
-  ],
+    skills: [
+      "Java",
+      "Python",
+      "C",
+    ],
+  },
 
-  backend: [
-    "Spring Boot",
-    "Node.js",
-    "REST APIs"
-  ],
+  {
+    title: "Frontend",
 
-  databases: [
-    "MySQL",
-    "MongoDB"
-  ],
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+    ],
+  },
 
-  tools: [
-    "Git",
-    "GitHub",
-    "Linux",
-    "VS Code"
-  ]
-};
+  {
+    title: "Backend",
+
+    skills: [
+      "REST APIs",
+    ],
+  },
+
+  {
+    title: "Databases",
+
+    skills: [
+      "MySQL",
+    ],
+  },
+
+  {
+    title: "Tools",
+
+    skills: [
+      "Git",
+      "GitHub",
+      "VS Code",
+    ],
+  },
+];

@@ -1,99 +1,139 @@
+import Image from "next/image";
+
 export default function ProjectCard({
-  project,
+  title,
+  description,
+  tech,
+  image,
+  github,
+  demo,
 }) {
   return (
     <div
       className="
-      rounded-2xl
+      group
+      rounded-3xl
       border
-      overflow-hidden
-      hover:shadow-xl
-      transition
-      bg-white
-    "
+      border-white/10
+      bg-white/70
+      dark:bg-slate-800/70
+      backdrop-blur-lg
+      p-6
+      shadow-lg
+      hover:shadow-2xl
+      hover:-translate-y-2
+      transition-all
+      duration-300
+      "
     >
-      <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-500" />
+      {/* Project Image */}
 
-      <div className="p-6">
+      <div className="relative h-56 rounded-2xl overflow-hidden mb-6">
 
-        <div className="flex justify-between items-center">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="
+          object-cover
+          group-hover:scale-105
+          transition-transform
+          duration-500
+          "
+        />
 
-          <h3 className="text-xl font-bold">
-            {project.title}
-          </h3>
+      </div>
 
+      {/* Title */}
+
+      <h3
+        className="
+        text-2xl
+        font-bold
+        mb-3
+        text-slate-900
+        dark:text-white
+        "
+      >
+        {title}
+      </h3>
+
+      {/* Description */}
+
+      <p
+        className="
+        text-gray-600
+        dark:text-gray-300
+        mb-6
+        "
+      >
+        {description}
+      </p>
+
+      {/* Technologies */}
+
+      <div className="flex flex-wrap gap-2 mb-6">
+
+        {tech.map((item) => (
           <span
+            key={item}
             className="
-            text-sm
             px-3
             py-1
             rounded-full
             bg-blue-100
-            text-blue-700
-          "
-          >
-            {project.category}
-          </span>
-
-        </div>
-
-        <p className="mt-4 text-gray-600">
-          {project.description}
-        </p>
-
-        <p className="mt-4 text-sm text-gray-500">
-          {project.impact}
-        </p>
-
-        <div className="flex flex-wrap gap-2 mt-4">
-
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="
-              px-3
-              py-1
-              rounded-full
-              border
-              text-sm
+            dark:bg-blue-900
+            text-sm
             "
-            >
-              {tech}
-            </span>
-          ))}
-
-        </div>
-
-        <div className="flex gap-4 mt-6">
-
-          <a
-            href={project.github}
-            className="
-            px-4
-            py-2
-            rounded-lg
-            border
-          "
           >
-            GitHub
-          </a>
-
-          <a
-            href={project.demo}
-            className="
-            px-4
-            py-2
-            rounded-lg
-            bg-blue-600
-            text-white
-          "
-          >
-            Demo
-          </a>
-
-        </div>
+            {item}
+          </span>
+        ))}
 
       </div>
+
+      {/* Buttons */}
+
+      <div className="flex gap-4">
+
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+          px-4
+          py-2
+          rounded-xl
+          bg-blue-600
+          text-white
+          hover:bg-blue-700
+          transition
+          "
+        >
+          GitHub
+        </a>
+
+        <a
+          href={demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+          px-4
+          py-2
+          rounded-xl
+          border
+          border-slate-300
+          dark:border-slate-700
+          hover:bg-slate-100
+          dark:hover:bg-slate-700
+          transition
+          "
+        >
+          Live Demo
+        </a>
+
+      </div>
+
     </div>
   );
 }
