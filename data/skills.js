@@ -5,7 +5,6 @@ export const skills = [
     skills: [
       "Java",
       "Python",
-      "C",
     ],
   },
 

@@ -14,12 +14,12 @@ export const profile = {
   degree:
     "B.Tech Computer Science and Engineering",
 
-  cgpa: "9.37",
+  cgpa: "9.24",
 
   graduationYear: "2027",
 
   tagline:
-    "AWS Certified Solutions Architect Associate and ServiceNow Certified Application Developer passionate about building scalable cloud and software solutions.",
+    "ServiceNow Certified Application Developer passionate about building scalable cloud and software solutions.",
 
   location:
     "Vijayawada, Andhra Pradesh, India",

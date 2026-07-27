@@ -13,5 +13,11 @@ export const experiences = [
       "Contributed to community service activities and social impact programs.",
   },
 
+
+  {
+    title: "Aspire Campus Ambassador",
+period: "2025 - Present",
+description:
+  "Engaged with students and promoted educational and career opportunities through awareness initiatives, helping drive participation in programs with 300+ registrations.",  },
   
 ];

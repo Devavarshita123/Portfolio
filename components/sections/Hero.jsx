@@ -76,8 +76,6 @@ export default function Hero() {
               sequence={[
                 "Software Engineer",
                 2000,
-                "AWS Certified Solutions Architect",
-                2000,
                 "ServiceNow Certified Application Developer",
                 2000,
                 "Problem Solver",

@@ -52,8 +52,7 @@ dark:bg-slate-900"
             <p className="text-gray-600">
               Create impactful software solutions
               that solve real-world problems while
-              continuously improving engineering,
-              system design, and problem-solving
+              continuously improving engineering and problem-solving
               abilities.
             </p>
 
@@ -69,12 +68,12 @@ dark:bg-slate-900"
           />
 
           <StatCard
-            value="2"
+            value="4"
             label="Certifications"
           />
 
           <StatCard
-            value="2"
+            value="9"
             label="Technologies"
           />
 

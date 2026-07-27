@@ -31,16 +31,16 @@ export default function ProjectCard({
       <div className="relative h-56 rounded-2xl overflow-hidden mb-6">
 
         <Image
-          src={image}
-          alt={title}
-          fill
-          className="
-          object-cover
-          group-hover:scale-105
-          transition-transform
-          duration-500
-          "
-        />
+  src={image}
+  alt={title}
+  fill
+  className="
+    object-contain
+    group-hover:scale-105
+    transition-transform
+    duration-500
+  "
+/>
 
       </div>
 
@@ -95,44 +95,44 @@ export default function ProjectCard({
       {/* Buttons */}
 
       <div className="flex gap-4">
+  <a
+    href={github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      px-4
+      py-2
+      rounded-xl
+      bg-blue-600
+      text-white
+      hover:bg-blue-700
+      transition
+    "
+  >
+    GitHub
+  </a>
 
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-          px-4
-          py-2
-          rounded-xl
-          bg-blue-600
-          text-white
-          hover:bg-blue-700
-          transition
-          "
-        >
-          GitHub
-        </a>
-
-        <a
-          href={demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-          px-4
-          py-2
-          rounded-xl
-          border
-          border-slate-300
-          dark:border-slate-700
-          hover:bg-slate-100
-          dark:hover:bg-slate-700
-          transition
-          "
-        >
-          Live Demo
-        </a>
-
-      </div>
+  {demo && (
+    <a
+      href={demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        px-4
+        py-2
+        rounded-xl
+        border
+        border-slate-300
+        dark:border-slate-700
+        hover:bg-slate-100
+        dark:hover:bg-slate-700
+        transition
+      "
+    >
+      Live Demo
+    </a>
+  )}
+</div>
 
     </div>
   );
