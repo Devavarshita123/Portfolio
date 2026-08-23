@@ -14,35 +14,10 @@ dark:bg-slate-900"
 
         <SectionTitle
           title="About Me"
-          subtitle="Software engineer focused on building impactful products and continuously improving problem-solving skills."
+          subtitle="Computer Science student with hands-on experience building software solutions, developing ServiceNow applications, along with hackathon experience solving real-world challenges."
         />
 
-        <div className="grid md:grid-cols-2 gap-12">
-
-          <div>
-
-            <h3 className="text-2xl font-semibold mb-4">
-              Education
-            </h3>
-
-            <p>
-              {profile.university}
-            </p>
-
-            <p>
-              {profile.degree}
-            </p>
-
-            <p>
-              CGPA: {profile.cgpa}
-            </p>
-
-            <p>
-              Graduation: {profile.graduationYear}
-            </p>
-
-          </div>
-
+        <div className="grid md:grid-cols-1">
           <div>
 
             <h3 className="text-2xl font-semibold mb-4">
@@ -50,10 +25,7 @@ dark:bg-slate-900"
             </h3>
 
             <p className="text-gray-600">
-              Create impactful software solutions
-              that solve real-world problems while
-              continuously improving engineering and problem-solving
-              abilities.
+              To contribute to high-impact, scalable software solutions by applying strong problem-solving skills, modern technologies, and engineering principles to solve complex real-world challenges and deliver measurable value.
             </p>
 
           </div>
@@ -69,7 +41,7 @@ dark:bg-slate-900"
 
           <StatCard
             value="4"
-            label="Certifications"
+            label="Global Certifications"
           />
 
           <StatCard
@@ -80,6 +52,11 @@ dark:bg-slate-900"
           <StatCard
             value="1"
             label="Publications"
+          />
+
+          <StatCard
+            value="2"
+            label="Hackathon"
           />
 
         </div>
