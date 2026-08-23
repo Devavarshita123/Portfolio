@@ -16,7 +16,7 @@ const iconMap = {
 };
 
 export default function StatCard({ value, label }) {
-  const Icon = icons[label] || Code2;
+  const Icon = iconMap[label] || Code2;
 
   return (
     <div
@@ -104,7 +104,9 @@ export default function StatCard({ value, label }) {
           absolute bottom-0 left-1/2
           h-[2px] w-0
           -translate-x-1/2
-          bg-gradient-to-r from-blue-400 to-purple-500
+          bg-gradient-to-r
+          from-blue-400
+          to-purple-500
           transition-all duration-300
           group-hover:w-1/2
         "
