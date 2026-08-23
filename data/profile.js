@@ -21,7 +21,7 @@ export const profile = {
   graduationYear: "2027",
 
   tagline:
-    "ServiceNow Certified Application Developer & Solution Architect, passionate about problem-solving and building scalable, industry-ready software solutions."
+    "ServiceNow Certified Application Developer & Solution Architect, passionate about problem-solving and building scalable, industry-ready software solutions.",
 
 
   location:
