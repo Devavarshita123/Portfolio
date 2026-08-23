@@ -6,6 +6,8 @@ export const profile = {
   roles: [
     "Software Developer",
     "Problem Solver",
+     "ServiceNow Application Developer",
+     "Solution Architect",
   ],
 
   university:
@@ -19,7 +21,8 @@ export const profile = {
   graduationYear: "2027",
 
   tagline:
-    "ServiceNow Certified Application Developer passionate about building scalable cloud and software solutions.",
+    "ServiceNow Certified Application Developer & Solution Architect, passionate about problem-solving and building scalable, industry-ready software solutions."
+
 
   location:
     "Vijayawada, Andhra Pradesh, India",
