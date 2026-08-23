@@ -6,13 +6,13 @@ import {
   Trophy,
 } from "lucide-react";
 
-const icons = {
+const iconMap = {
   Projects: FolderKanban,
-  Certifications: Award,
   "Global Certifications": Award,
+  "Coding Problems Solved": Code2,
   Technologies: Code2,
-  Publications: BookOpen,
-  Hackathon: Trophy,
+  Publication: BookOpen,
+  Hackathons: Trophy,
 };
 
 export default function StatCard({ value, label }) {
