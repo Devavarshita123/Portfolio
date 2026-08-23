@@ -6,8 +6,11 @@ import { TypeAnimation } from "react-type-animation";
 import {
   FaGithub,
   FaLinkedin,
-  FaEnvelope,
 } from "react-icons/fa";
+import {
+  SiCodechef,
+  SiLeetcode,
+} from "react-icons/si";
 
 import { profile } from "../../data/profile";
 
@@ -57,7 +60,7 @@ export default function Hero() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          {/* Left Section */}
+          {/* ================= LEFT SECTION ================= */}
 
           <motion.div
             initial={{
@@ -72,6 +75,9 @@ export default function Hero() {
               duration: 0.8,
             }}
           >
+
+            {/* Animated Role */}
+
             <TypeAnimation
               sequence={[
                 "Software Engineer",
@@ -95,9 +101,20 @@ export default function Hero() {
               "
             />
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            {/* Name */}
+
+            <h1
+              className="
+                text-5xl
+                md:text-7xl
+                font-bold
+                leading-tight
+              "
+            >
               {profile.name}
             </h1>
+
+            {/* Degree */}
 
             <p
               className="
@@ -110,6 +127,8 @@ export default function Hero() {
               {profile.degree}
             </p>
 
+            {/* University */}
+
             <p
               className="
                 text-gray-500
@@ -117,18 +136,31 @@ export default function Hero() {
               "
             >
               {profile.university}
-              
             </p>
 
-              <p
+            {/* CGPA */}
+
+            <p
               className="
                 text-gray-500
                 dark:text-gray-400
               "
             >
-              
               CGPA : {profile.cgpa}
             </p>
+
+            {/* Graduation */}
+
+            <p
+              className="
+                text-gray-500
+                dark:text-gray-400
+              "
+            >
+              Graduation : 2027
+            </p>
+
+            {/* Tagline */}
 
             <p
               className="
@@ -142,13 +174,23 @@ export default function Hero() {
               {profile.tagline}
             </p>
 
-            <div className="mt-4 text-gray-500 dark:text-gray-400">
+            {/* Location */}
+
+            <div
+              className="
+                mt-4
+                text-gray-500
+                dark:text-gray-400
+              "
+            >
               📍 {profile.location}
             </div>
 
-            {/* CTA Buttons */}
+            {/* ================= CTA BUTTONS ================= */}
 
             <div className="flex flex-wrap gap-4 mt-8">
+
+              {/* View Projects */}
 
               <a
                 href="#projects"
@@ -166,9 +208,12 @@ export default function Hero() {
                 View Projects
               </a>
 
+              {/* Resume */}
+
               <a
                 href="/resume.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="
                   border
                   border-slate-300
@@ -183,6 +228,8 @@ export default function Hero() {
               >
                 Download Resume
               </a>
+
+              {/* Contact */}
 
               <a
                 href="#contact"
@@ -203,41 +250,99 @@ export default function Hero() {
 
             </div>
 
-            {/* Social Icons */}
+            {/* ================= SOCIAL & CODING PROFILES ================= */}
 
-            <div className="flex gap-6 mt-8">
+            <div className="flex items-center gap-6 mt-8">
+
+              {/* GitHub */}
 
               <a
                 href="https://github.com/Devavarshita123"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
+                title="GitHub"
                 className="
                   text-2xl
-                  hover:text-blue-600
-                  transition
+                  text-gray-700
+                  dark:text-gray-300
+                  hover:text-blue-500
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
                 "
               >
                 <FaGithub />
               </a>
 
+              {/* LinkedIn */}
+
               <a
                 href="https://linkedin.com/in/devavarshita"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn"
                 className="
                   text-2xl
-                  hover:text-blue-600
-                  transition
+                  text-gray-700
+                  dark:text-gray-300
+                  hover:text-blue-500
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
                 "
               >
                 <FaLinkedin />
               </a>
 
+              {/* CodeChef */}
+
+              <a
+                href="https://www.codechef.com/users/devavarshita"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CodeChef"
+                title="CodeChef"
+                className="
+                  text-2xl
+                  text-gray-700
+                  dark:text-gray-300
+                  hover:text-blue-500
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                "
+              >
+                <SiCodechef />
+              </a>
+
+              {/* LeetCode */}
+
+              <a
+                href="https://leetcode.com/u/Devavarshita/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LeetCode"
+                title="LeetCode"
+                className="
+                  text-2xl
+                  text-gray-700
+                  dark:text-gray-300
+                  hover:text-blue-500
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                "
+              >
+                <SiLeetcode />
+              </a>
 
             </div>
+
           </motion.div>
 
-          {/* Right Section */}
+          {/* ================= RIGHT SECTION ================= */}
 
           <motion.div
             initial={{
@@ -254,6 +359,7 @@ export default function Hero() {
             }}
             className="flex justify-center"
           >
+
             <div
               className="
                 h-80
@@ -266,6 +372,7 @@ export default function Hero() {
                 shadow-2xl
               "
             >
+
               <div
                 className="
                   h-full
@@ -279,6 +386,7 @@ export default function Hero() {
                   overflow-hidden
                 "
               >
+
                 <Image
                   src="/profile.jpg"
                   alt="Devavarshita Vatsavai"
@@ -292,12 +400,17 @@ export default function Hero() {
                     w-full
                   "
                 />
+
               </div>
+
             </div>
+
           </motion.div>
 
         </div>
+
       </div>
+
     </section>
   );
 }
