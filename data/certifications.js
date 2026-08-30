@@ -19,6 +19,16 @@ export const certifications = [
     link: "https://www.credly.com/badges/73075a09-680d-4586-90b5-05c737725559/public_url",
   },
 
+{
+  title: "ServiceNow Certified Application Developer",
+  issuer: "ServiceNow",
+  year: "2026",
+  icon: "💻",
+  description:
+    "Globally recognized certification validating skills in designing, developing, testing, and deploying applications on the ServiceNow platform.",
+  link: "https://www.credly.com/badges/0da45415-e755-4130-8f32-907a38364dcc/public_url",
+},
+  
   {
     title: "ServiceNow Certified System Administrator",
     issuer: "ServiceNow",
