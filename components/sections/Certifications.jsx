@@ -1,7 +1,6 @@
-import {
-  globalCertifications,
-  technicalCertifications,
-} from "../../data/certifications";
+import { certifications } from "../../data/certifications";
+
+
 
 import {
   FaAward,
@@ -9,6 +8,18 @@ import {
   FaGlobe,
   FaCode,
 } from "react-icons/fa";
+
+const globalCertifications = certifications.filter(
+  (certificate) =>
+    certificate.issuer === "Amazon Web Services (AWS)" ||
+    certificate.issuer === "ServiceNow"
+);
+
+const technicalCertifications = certifications.filter(
+  (certificate) =>
+    certificate.issuer !== "Amazon Web Services (AWS)" &&
+    certificate.issuer !== "ServiceNow"
+);
 
 export default function Certifications() {
   return (
