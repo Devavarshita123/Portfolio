@@ -1,343 +1,151 @@
+
 "use client";
 
-import { experiences } from "../../data/experience";
+import { motion } from "framer-motion";
 import SectionTitle from "../ui/SectionTitle";
-import FadeIn from "../animations/FadeIn";
+import { experiences } from "../../data/experience.js";
 
-import {
-  FaGithub,
-  FaExternalLinkAlt,
-  FaCalendarAlt,
-  FaBuilding,
-  FaArrowRight,
-} from "react-icons/fa";
+const accents = [
+  "from-violet-500 to-fuchsia-500",
+  "from-blue-500 to-cyan-400",
+  "from-amber-500 to-orange-400",
+  "from-emerald-500 to-teal-400",
+];
+
+const symbols = ["✦", "↗", "</>", "♡"];
 
 export default function Experience() {
   return (
     <section
       id="experience"
-      className="
-        py-24
-        bg-slate-50
-        dark:bg-slate-950
-      "
+      className="relative overflow-hidden bg-slate-50 py-24 dark:bg-slate-950"
     >
-      <FadeIn>
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="pointer-events-none absolute -left-40 top-40 h-80 w-80 rounded-full bg-violet-200/30 blur-3xl dark:bg-violet-900/10" />
+      <div className="pointer-events-none absolute -right-40 bottom-20 h-80 w-80 rounded-full bg-blue-200/30 blur-3xl dark:bg-blue-900/10" />
 
-          <SectionTitle
-            title="Experience & Leadership"
-            subtitle="Technical learning, leadership, community involvement, and competitive experiences shaping my engineering journey."
-          />
+      <div className="relative mx-auto max-w-6xl px-6">
+        <SectionTitle
+          title="Experience & Leadership"
+          subtitle="Building, leading, and learning beyond the classroom."
+        />
 
-          {/* Experience Grid */}
+        <div className="mb-10 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
+            A few milestones along my journey
+          </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mt-14">
+          <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-medium text-slate-600 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+            04 EXPERIENCES
+          </span>
+        </div>
 
-            {experiences.map((experience, index) => (
+        <div className="grid gap-5 md:grid-cols-2">
+          {experiences.map((experience, index) => (
+            <motion.article
+              key={experience.title}
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+              className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/60 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700 dark:hover:shadow-black/20"
+            >
               <div
-                key={`${experience.title}-${index}`}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-3xl
-                  border
-                  border-slate-200
-                  dark:border-slate-800
-                  bg-white
-                  dark:bg-slate-900
-                  p-7
-                  shadow-sm
-                  hover:shadow-2xl
-                  hover:-translate-y-2
-                  transition-all
-                  duration-300
-                "
-              >
-                {/* Top Gradient Line */}
+                className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${accents[index % accents.length]}`}
+              />
 
+              <div className="flex items-start gap-4">
                 <div
-                  className="
-                    absolute
-                    top-0
-                    left-0
-                    w-full
-                    h-1
-                    bg-gradient-to-r
-                    from-blue-500
-                    via-indigo-500
-                    to-purple-500
-                  "
-                />
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${accents[index % accents.length]} text-lg font-bold text-white shadow-md`}
+                >
+                  {symbols[index % symbols.length]}
+                </div>
 
-                {/* Header */}
+                <div className="min-w-0 flex-1 pt-0.5">
+                  <div className="flex flex-wrap items-start justify-between gap-2">
+                    <h3 className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">
+                      {experience.title}
+                    </h3>
 
-                <div className="flex justify-between items-start gap-4">
-
-                  <div className="flex items-center gap-4">
-
-                    {/* Icon */}
-
-                    <div
-                      className="
-                        h-14
-                        w-14
-                        rounded-2xl
-                        flex
-                        items-center
-                        justify-center
-                        text-2xl
-                        bg-blue-50
-                        dark:bg-blue-500/10
-                        border
-                        border-blue-100
-                        dark:border-blue-500/20
-                      "
-                    >
-                      {experience.icon}
-                    </div>
-
-                    <div>
-
-                      <h3
-                        className="
-                          text-xl
-                          md:text-2xl
-                          font-bold
-                        "
-                      >
-                        {experience.title}
-                      </h3>
-
-                      <p
-                        className="
-                          flex
-                          items-center
-                          gap-2
-                          mt-1
-                          text-gray-500
-                          dark:text-gray-400
-                        "
-                      >
-                        <FaBuilding className="text-blue-500" />
-
-                        {experience.organization}
-                      </p>
-
-                    </div>
-
+                    <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                      {experience.type}
+                    </span>
                   </div>
 
-                  {/* Type Badge */}
+                  <p className="mt-1 text-sm font-medium text-slate-500 dark:text-slate-400">
+                    {experience.company}
+                    <span className="mx-2 text-slate-300 dark:text-slate-600">
+                      /
+                    </span>
+                    {experience.date}
+                  </p>
+                </div>
+              </div>
 
-                  <span
-                    className="
-                      whitespace-nowrap
-                      px-3
-                      py-1
-                      rounded-full
-                      text-xs
-                      font-semibold
-                      bg-blue-100
-                      text-blue-700
-                      dark:bg-blue-500/10
-                      dark:text-blue-400
-                    "
+              {experience.achievement && (
+                <div className="mt-5 rounded-xl border border-slate-100 bg-slate-50 px-4 py-3 dark:border-slate-800 dark:bg-slate-950/70">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400">
+                    Key achievement
+                  </p>
+                  <p
+                    className={`mt-1 font-semibold ${
+                      index === 0 || index === 1
+                        ? "bg-gradient-to-r " +
+                          accents[index] +
+                          " bg-clip-text text-transparent"
+                        : "text-slate-800 dark:text-slate-100"
+                    }`}
                   >
-                    {experience.type}
-                  </span>
-
+                    {experience.achievement}
+                  </p>
                 </div>
+              )}
 
-                {/* Date */}
+              <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                {experience.description}
+              </p>
 
-                <div
-                  className="
-                    flex
-                    items-center
-                    gap-2
-                    mt-6
-                    text-sm
-                    font-medium
-                    text-blue-600
-                    dark:text-blue-400
-                  "
-                >
-                  <FaCalendarAlt />
+              {experience.highlights?.length > 0 && (
+                <ul className="mt-4 space-y-2">
+                  {experience.highlights.map((highlight, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-2 text-sm leading-5 text-slate-600 dark:text-slate-400"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400 transition-colors group-hover:bg-violet-500" />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-                  {experience.period}
-                </div>
-
-                {/* Description */}
-
-                <p
-                  className="
-                    mt-5
-                    leading-relaxed
-                    text-gray-600
-                    dark:text-gray-400
-                  "
-                >
-                  {experience.description}
-                </p>
-
-                {/* Highlights */}
-
-                <div className="mt-6">
-
-                  <h4
-                    className="
-                      text-sm
-                      font-semibold
-                      uppercase
-                      tracking-wider
-                      text-gray-500
-                      dark:text-gray-400
-                    "
-                  >
-                    Highlights
-                  </h4>
-
-                  <ul className="mt-3 space-y-2">
-
-                    {experience.highlights.map(
-                      (highlight, highlightIndex) => (
-                        <li
-                          key={highlightIndex}
-                          className="
-                            flex
-                            items-start
-                            gap-3
-                            text-sm
-                            text-gray-600
-                            dark:text-gray-400
-                          "
-                        >
-                          <span
-                            className="
-                              mt-2
-                              h-2
-                              w-2
-                              rounded-full
-                              bg-blue-500
-                              shrink-0
-                            "
-                          />
-
-                          {highlight}
-
-                        </li>
-                      )
-                    )}
-
-                  </ul>
-
-                </div>
-
-                {/* Skills */}
-
-                <div className="flex flex-wrap gap-2 mt-6">
-
+              {experience.skills?.length > 0 && (
+                <div className="mt-5 flex flex-wrap gap-2">
                   {experience.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="
-                        px-3
-                        py-1
-                        rounded-full
-                        text-xs
-                        border
-                        border-slate-200
-                        dark:border-slate-700
-                        bg-slate-50
-                        dark:bg-slate-800
-                        text-gray-600
-                        dark:text-gray-300
-                      "
+                      className="rounded-lg border border-slate-200/80 px-2.5 py-1 text-[11px] font-medium text-slate-500 dark:border-slate-700 dark:text-slate-400"
                     >
                       {skill}
                     </span>
                   ))}
-
                 </div>
+              )}
 
-                {/* Links */}
-
-                {(experience.github || experience.demo) && (
-
-                  <div className="flex flex-wrap gap-4 mt-7 pt-6 border-t border-slate-200 dark:border-slate-800">
-
-                    {experience.github && (
-
-                      <a
-                        href={experience.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="
-                          inline-flex
-                          items-center
-                          gap-2
-                          px-4
-                          py-2
-                          rounded-xl
-                          bg-slate-900
-                          text-white
-                          dark:bg-white
-                          dark:text-slate-900
-                          hover:scale-105
-                          transition
-                        "
-                      >
-                        <FaGithub />
-
-                        GitHub
-
-                        <FaArrowRight className="text-xs" />
-                      </a>
-
-                    )}
-
-                    {experience.demo && (
-
-                      <a
-                        href={experience.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="
-                          inline-flex
-                          items-center
-                          gap-2
-                          px-4
-                          py-2
-                          rounded-xl
-                          bg-blue-600
-                          text-white
-                          hover:bg-blue-700
-                          hover:scale-105
-                          transition
-                        "
-                      >
-                        <FaExternalLinkAlt />
-
-                        Live Demo
-
-                        <FaArrowRight className="text-xs" />
-                      </a>
-
-                    )}
-
-                  </div>
-
-                )}
-
-              </div>
-            ))}
-
-          </div>
-
+              {experience.link && (
+                <a
+                  href={experience.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition-colors hover:text-violet-600 dark:text-slate-300 dark:hover:text-violet-400"
+                >
+                  View project on GitHub
+                  <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </motion.article>
+          ))}
         </div>
-      </FadeIn>
+      </div>
     </section>
   );
 }

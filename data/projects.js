@@ -17,7 +17,6 @@ export const projects = [
 
     github: "https://github.com/Devavarshita123/CLD-Backend",
 
-    demo: "https://cld-frontend.vercel.app/login",
   },
 
   {
@@ -47,6 +46,29 @@ export const projects = [
 
 },
 
+{
+  title: "Employee Raise Issue - Record Producer & Service Portal Integration",
+
+  description:
+    "ServiceNow Employee Issue Management system using a Record Producer and Service Portal integration to standardize issue submission, validation, prioritization, and tracking.",
+
+  tech: [
+    "Service Catalog",
+    "Admin Tools",
+    "HTML",
+    "CSS",
+    "Client Script",
+    "Portal Servers",
+    "Developer Console",
+  ],
+
+  image: "/projects/Employee-service-issue-management.png",
+
+  github: "https://github.com/Devavarshita123/servicenow-employee-issue-management",
+
+  demo: "https://drive.google.com/file/d/1KUCvkz39rTa8ajSfNG38yhTT0ZIAn62x/view",
+
+},
   
   
 ];

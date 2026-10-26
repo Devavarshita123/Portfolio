@@ -1,97 +1,59 @@
 export const experiences = [
   {
-    title: "NSS Volunteer",
-    organization: "National Service Scheme",
-    period: "2023 – 2024",
-    type: "Community Impact",
-    icon: "🤝",
-
-    description:
-      "Contributed to community-focused initiatives through the National Service Scheme, supporting social impact activities while strengthening teamwork, leadership, and responsibility.",
-
-    highlights: [
-      "Contributed to the successful execution of community service and social impact initiatives",
-      "Collaborated with student volunteers to support and coordinate outreach activities",
-    ],
-
-    skills: [
-      "Leadership",
-      "Team Collaboration",
-      "Community Engagement",
-      "Communication",
-    ],
-  },
-
-  {
-    title: "Amazon Bootcamp Participant",
-    organization: "Amazon",
-    period: "2024 – 2025",
-    type: "Technical Learning",
-    icon: "💻",
-
-    description:
-      "Strengthened my problem-solving and DSA skills through consistent practice and hands-on technical learning.",
-
-    highlights: [
-      "Built strong foundations in Data Structures and Algorithms",
-      "Solved challenging coding problems through consistent practice",
-    ],
-
-    skills: [
-      "Data Structures",
-      "Algorithms",
-      "Problem Solving",
-      "Java",
-    ],
-  },
-
-  {
-    title: "Aspire Campus Ambassador",
-    organization: "Aspire Leaders Program",
-    period: "2025 – Present",
-    type: "Leadership",
-    icon: "🌍",
-
-    description:
-      "Engaging with students and promoting educational and career opportunities through awareness initiatives and campus outreach.",
-
-    highlights: [
-      "Reached and engaged with 300+ students",
-      "Promoted educational and career development opportunities",
-      "Supported awareness and participation initiatives",
-    ],
-
-    skills: [
-      "Leadership",
-      "Communication",
-      "Community Building",
-      "Outreach",
-    ],
-  },
-
-  {
     title: "WeForShe | HackerRamp",
-    organization: "Myntra",
-    period: "2025",
+    company: "Myntra",
     type: "Hackathon",
-    icon: "🚀",
-
+    date: "2025",
+    achievement: "Top 100 teams across India",
     description:
-      "Selected among the Top 100 teams across India in Myntra's WeForShe HackerRamp, developing a solution focused on personalized fashion recommendations.",
-
+      "Collaborated on a personalized fashion recommendation solution focused on improving product discovery.",
     highlights: [
       "Selected among the Top 100 teams across India",
-      "Built a solution for more personalized product recommendations",
-      "Collaborated to design and develop a user-focused solution under hackathon constraints",
+      "Developed a personalized fashion recommendation solution",
     ],
-
-    skills: [
-      "Problem Solving",
-      "Recommendation Systems",
-      "Team Collaboration",
-      "Product Development",
+    skills: ["Recommendation Systems", "Team Collaboration"],
+    link: "https://github.com/Wadrobe-Warriors",
+  },
+  {
+    title: "Aspire Campus Ambassador",
+    company: "Aspire Leaders Program",
+    type: "Leadership",
+    date: "2025 – Present",
+    achievement: "Engaged 300+ students",
+    description:
+      "Promote educational and career-development opportunities through campus outreach.",
+    highlights: [
+      "Engaged 300+ students",
+      "Promoted educational and career-development opportunities",
     ],
-
-    github: "https://github.com/Wadrobe-Warriors",
+    skills: ["Leadership", "Communication", "Community Building"],
+  },
+  {
+    title: "Amazon Bootcamp Participant",
+    company: "Amazon",
+    type: "Technical Learning",
+    date: "2024 – 2025",
+    achievement: "Java and DSA practice",
+    description:
+      "Strengthened problem-solving skills through consistent Data Structures and Algorithms practice.",
+    highlights: [
+      "Built strong foundations in Data Structures and Algorithms",
+      "Practiced coding problems using Java",
+    ],
+    skills: ["Java", "Data Structures", "Algorithms"],
+  },
+  {
+    title: "NSS Volunteer",
+    company: "National Service Scheme",
+    type: "Community Impact",
+    date: "2023 – 2024",
+    achievement: "Community outreach",
+    description:
+      "Supported community-service initiatives alongside fellow student volunteers.",
+    highlights: [
+      "Contributed to community-service initiatives",
+      "Collaborated with student volunteers on outreach activities",
+    ],
+    skills: ["Teamwork", "Community Engagement", "Communication"],
   },
 ];

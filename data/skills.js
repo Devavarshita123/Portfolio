@@ -3,6 +3,7 @@ export const skills = [
     title: "Programming Languages",
 
     skills: [
+      "C",
       "Java",
       "Python",
     ],
@@ -44,4 +45,18 @@ export const skills = [
       "VS Code",
     ],
   },
+
+  {
+  title: "Operating Systems",
+  skills: [
+    "Linux",
+    "Windows",
+  ],
+},
+{
+  title: "Development Environment",
+  skills: [
+    "WSL",
+  ],
+},
 ];
