@@ -46,6 +46,36 @@ export const projects = [
 
 },
 
+
+{
+  title: "CloudCart - AWS Well-Architected E-Commerce Reference Application",
+
+  description:
+    "A five-pillar AWS Well-Architected e-commerce reference application demonstrating Security, Reliability, Operational Excellence, Performance Efficiency, and Cost Optimization. Deployed on Amazon EC2 with a custom VPC, IAM role-based access, AWS Systems Manager, CloudWatch monitoring and centralized application logging, health checks, and in-memory caching.",
+
+  tech: [
+    "AWS EC2",
+    "Amazon VPC",
+    "AWS IAM",
+    "AWS Systems Manager",
+    "Amazon CloudWatch",
+    "CloudWatch Logs",
+    "Python",
+    "HTML",
+    "CSS",
+    "Linux",
+    "Systemd",
+    "AWS Well-Architected Framework",
+  ],
+
+  image: "/projects/CloudCart.png",
+
+  github: "https://github.com/Devavarshita123/cloudcart-enterprise-ecommerce",
+
+  demo: "https://drive.google.com/file/d/1TunN2MU6vuxVy0oUM4sd82JR2LTPoBHZ/view?usp=sharing",
+},
+
+
 {
   title: "Employee Raise Issue - Record Producer & Service Portal Integration",
 
